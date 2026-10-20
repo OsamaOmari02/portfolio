@@ -1,0 +1,15 @@
+# Allow all crawlers, including search engines and AI crawlers (this is a public CV).
+User-agent: *
+Allow: /
+
+# To block specific AI crawlers instead, remove the line above and add blocks like:
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: ClaudeBot
+# Disallow: /
+# User-agent: Google-Extended
+# Disallow: /
+# User-agent: CCBot
+# Disallow: /
+
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
