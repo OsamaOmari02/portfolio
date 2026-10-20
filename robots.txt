@@ -12,4 +12,4 @@ Allow: /
 # User-agent: CCBot
 # Disallow: /
 
-Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+Sitemap: https://osama-omari.com/sitemap.xml

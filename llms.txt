@@ -3,8 +3,8 @@
 > Software engineer and Flutter developer from Jordan. 4 years of experience building scalable cross-platform mobile apps with Flutter and APIs with NestJS. Led a team and mentored junior developers at Code-mint (Jul 2022 – Jun 2025). 1st place, Best Mobile Application among Jordanian universities (2022).
 
 ## Pages
-- [Portfolio](https://YOUR-DOMAIN.com/): experience, projects, skills, achievements and contact details
-- [CV (PDF)](https://YOUR-DOMAIN.com/assets/Osama-Omari-CV.pdf): downloadable CV
+- [Portfolio](https://osama-omari.com/): experience, projects, skills, achievements and contact details
+- [CV (PDF)](https://osama-omari.com/assets/Osama-Omari-CV.pdf): downloadable CV
 
 ## Key facts
 - Role: Flutter Developer at Code-mint, Jul 2022 – Jun 2025
