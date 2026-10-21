@@ -9,7 +9,8 @@ const themeBtn = $('#themeBtn');
 const syncTheme = () => { themeBtn.dataset.mode = getComputedStyle(root).colorScheme === 'dark' ? 'dark' : 'light'; };
 try { const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; } catch (e) { }
 syncTheme();
-matchMedia('(prefers-color-scheme: dark)').addEventListener('change', syncTheme);
+const darkMq = matchMedia('(prefers-color-scheme: dark)');
+if (darkMq.addEventListener) darkMq.addEventListener('change', syncTheme); else if (darkMq.addListener) darkMq.addListener(syncTheme);
 themeBtn.addEventListener('click', () => {
     const next = themeBtn.dataset.mode === 'dark' ? 'light' : 'dark';
     root.dataset.theme = next;
@@ -143,6 +144,7 @@ if ('IntersectionObserver' in window) {
 } else {
     $$('.reveal').forEach(e => e.classList.add('in'));
 }
+window.siteReady = true;
 
 /* ---------- Typing effect (real title stays in the HTML) ---------- */
 const typed = $('#typed');
