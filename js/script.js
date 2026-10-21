@@ -126,10 +126,19 @@ const countUp = el => {
     requestAnimationFrame(tick);
 };
 if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver(es => es.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    }), { threshold: .1 });
-    $$('.reveal').forEach(e => io.observe(e));
+    let alive = false;
+    const io = new IntersectionObserver(es => {
+        alive = true;
+        es.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.remove('pre'); io.unobserve(e.target); }
+        });
+    }, { threshold: .05 });
+    const revealEls = $$('.reveal');
+    revealEls.forEach(el => {
+        if (!calm && el.getBoundingClientRect().top > innerHeight) el.classList.add('pre');
+        io.observe(el);
+    });
+    setTimeout(() => { if (!alive) revealEls.forEach(el => el.classList.remove('pre')); }, 2500);
 
     const co = new IntersectionObserver(es => es.forEach(e => {
         if (e.isIntersecting) { countUp(e.target); co.unobserve(e.target); }
