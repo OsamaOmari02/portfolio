@@ -717,65 +717,6 @@ footer {
     border-top: 1px solid var(--line)
 }
 
-/* command palette */
-#pal {
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--surface);
-    color: var(--text);
-    padding: 0;
-    width: min(520px, 92vw);
-    margin-top: 12vh;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, .4)
-}
-
-#pal::backdrop {
-    background: rgba(0, 0, 0, .45);
-    backdrop-filter: blur(3px)
-}
-
-#palIn {
-    width: 100%;
-    border: 0;
-    border-bottom: 1px solid var(--line);
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    font-size: 1.05rem;
-    padding: 16px 18px;
-    outline: none
-}
-
-#palList {
-    list-style: none;
-    margin: 0;
-    padding: 6px;
-    max-height: 50vh;
-    overflow: auto
-}
-
-#palList li {
-    margin: 0
-}
-
-#palList a {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 10px 12px;
-    border-radius: 8px;
-    color: var(--text)
-}
-
-#palList a small {
-    color: var(--muted)
-}
-
-#palList a:hover,
-#palList a.sel {
-    background: var(--accent-soft);
-    text-decoration: none
-}
 
 /* motion */
 @media (prefers-reduced-motion:no-preference) {

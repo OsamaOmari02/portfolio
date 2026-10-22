@@ -24,7 +24,6 @@ const setMenu = open => { menu.classList.toggle('open', open); menuBtn.setAttrib
 menuBtn.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
 menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
 addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
-if (/Mac|iPhone|iPad/.test(navigator.platform)) $('#palBtn kbd').textContent = '\u2318K';
 
 /* ---------- Project filter ---------- */
 const btns = $$('#projects .filters button'), items = $$('#projectGrid li');
